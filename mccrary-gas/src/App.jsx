@@ -132,9 +132,9 @@ export default function App() {
               <div className="w-14 h-14 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors">
                 <Flame className="w-7 h-7 text-orange-500 group-hover:text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Residential Propane</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Residential Work</h3>
               <p className="text-neutral-400 mb-6 line-clamp-3">
-                Keep your home warm and your appliances running smoothly with our dependable residential propane delivery and tank installation services.
+                Keep your home warm and your appliances running smoothly with our dependable residential line installation and maintenance services.
               </p>
               <a href="#contact" className="text-orange-500 font-medium hover:text-orange-400 inline-flex items-center gap-1">
                 Learn more <ChevronRight className="w-4 h-4" />
@@ -146,9 +146,9 @@ export default function App() {
               <div className="w-14 h-14 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors">
                 <Truck className="w-7 h-7 text-orange-500 group-hover:text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Commercial Gas Delivery</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Commercial</h3>
               <p className="text-neutral-400 mb-6 line-clamp-3">
-                Bulk delivery solutions for restaurants, warehouses, and agricultural businesses. We ensure you never run out of fuel during peak operations.
+                Bulk delivery solutions for restaurants, warehouses, and agricultural businesses. Expert installation and maintenance for commercial gas lines and equipment.
               </p>
               <a href="#contact" className="text-orange-500 font-medium hover:text-orange-400 inline-flex items-center gap-1">
                 Learn more <ChevronRight className="w-4 h-4" />
@@ -193,7 +193,7 @@ export default function App() {
             <div className="lg:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 uppercase tracking-wide">About McCrary Gas</h2>
               <p className="text-neutral-300 text-lg mb-6 leading-relaxed">
-                Founded on the principles of safety, reliability, and community trust, McCrary Gas has grown from a small local supplier to a premier energy partner for the region. 
+                Founded on the principles of safety, reliability, and community trust 
               </p>
               <p className="text-neutral-400 mb-8 leading-relaxed">
                 We understand that gas is more than just fuel—it's the heat in your home, the fire in your restaurant's kitchen, and the power behind your industrial machinery. Our dedicated team works around the clock to ensure your supply is seamless and your equipment is safe.
@@ -204,19 +204,19 @@ export default function App() {
                   <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                   </div>
-                  <span className="text-neutral-300">24/7 Emergency Dispatch Available</span>
+                  <span className="text-neutral-300">Natural, Propane, and Medical Gas</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                   </div>
-                  <span className="text-neutral-300">Licensed & Insured Professionals</span>
+                  <span className="text-neutral-300">Experienced Professionals</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center flex-shrink-0">
                     <div className="w-2 h-2 rounded-full bg-orange-500"></div>
                   </div>
-                  <span className="text-neutral-300">Competitive & Transparent Pricing</span>
+                  <span className="text-neutral-300">Competitive Pricing</span>
                 </li>
               </ul>
             </div>
@@ -330,7 +330,7 @@ export default function App() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">Get In Touch</h2>
               <div className="w-24 h-1 bg-orange-500 rounded-full mb-8"></div>
               <p className="text-neutral-400 mb-10 text-lg">
-                Ready to set up a new service or need a refill? Contact our team today for fast, friendly assistance.
+                Planning a new installation, upgrading your equipment, or need expert line repairs? Contact our licensed team today for fast, professional assistance.
               </p>
 
               <div className="space-y-8">
