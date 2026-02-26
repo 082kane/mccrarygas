@@ -13,6 +13,14 @@ import {
   ChevronRight
 } from 'lucide-react';
 
+import testPic from './assets/test_pic.jpg';
+import projOnePic from './assets/project1.jpg';
+import projTwoPic from './assets/project2.jpg';
+import projThreePic from './assets/project3.jpg';
+import projFourPic from './assets/project4.jpg';
+import projFivePic from './assets/project5.jpg';
+import projSixPic from './assets/project6.jpg';
+
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -39,10 +47,8 @@ export default function App() {
               <a href="#home" className="text-neutral-300 hover:text-orange-500 transition-colors font-medium">Home</a>
               <a href="#services" className="text-neutral-300 hover:text-orange-500 transition-colors font-medium">Services</a>
               <a href="#about" className="text-neutral-300 hover:text-orange-500 transition-colors font-medium">About Us</a>
+              <a href="#portfolio" className="text-neutral-300 hover:text-orange-500 transition-colors font-medium">Our Work</a>
               <a href="#contact" className="text-neutral-300 hover:text-orange-500 transition-colors font-medium">Contact</a>
-              <a href="#contact" className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-md font-bold transition-colors">
-                Get a Quote
-              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -83,7 +89,7 @@ export default function App() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
             <ShieldCheck className="w-4 h-4" />
-            Reliable Energy Solutions Since 1998
+            Reliable Energy Solutions
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-8">
             Powering Your <br className="hidden md:block" />
@@ -92,15 +98,19 @@ export default function App() {
             </span>
           </h1>
           <p className="mt-4 text-xl md:text-2xl text-neutral-400 max-w-3xl mx-auto mb-10">
-            Safe, dependable, and affordable gas delivery and services for residential, commercial, and industrial needs.
+            Safe, dependable, and affordable gas line installs and services for residential, commercial, and industrial needs. Give us a call today! 256-244-6945
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#contact" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)] flex items-center justify-center gap-2">
-              Schedule Delivery <ChevronRight className="w-5 h-5" />
-            </a>
+            {/* Updated Button Here */}
+            
             <a href="#services" className="bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 px-8 py-4 rounded-md font-bold text-lg transition-all flex items-center justify-center">
               Our Services
             </a>
+            <a href="#portfolio" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-md font-bold text-lg transition-all shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)] flex items-center justify-center gap-2">
+              View Our Work <ChevronRight className="w-5 h-5" />
+            </a>
+            
+
           </div>
         </div>
       </section>
@@ -171,13 +181,11 @@ export default function App() {
                 {/* Abstract shape representing a tank/industrial element */}
                 <div className="aspect-square rounded-2xl bg-neutral-900 border border-neutral-800 overflow-hidden relative flex items-center justify-center">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#ea580c_0%,transparent_50%)] opacity-20"></div>
-                  <Flame className="w-48 h-48 text-neutral-800" />
+                  <img src={testPic} 
+                  alt="About Gas" 
+                  className="w-full h-full object-cover" />
                   
-                  {/* Floating stats box */}
-                  <div className="absolute bottom-6 -right-6 md:right-6 bg-orange-500 text-white p-6 rounded-xl shadow-xl">
-                    <p className="text-4xl font-extrabold">25+</p>
-                    <p className="text-sm font-medium uppercase tracking-wider">Years of Excellence</p>
-                  </div>
+              
                 </div>
               </div>
             </div>
@@ -216,6 +224,102 @@ export default function App() {
         </div>
       </section>
 
+        {/* Portfolio / Our Work Section */}
+      <section id="portfolio" className="py-20 bg-neutral-900 border-t border-neutral-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-wide">Our Work</h2>
+            <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full mb-6"></div>
+            <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+              Take a look at some of our recent residential and commercial installations.
+            </p>
+          </div>
+
+          {/* Image Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* Project 1 */}
+            <div className="group relative aspect-video overflow-hidden rounded-xl bg-neutral-800 border border-neutral-700">
+              <img 
+                src={projOnePic} 
+                alt="Commercial tank installation" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white font-bold text-xl mb-1">Commercial Tank Install</h3>
+                <p className="text-orange-400 text-sm font-medium">Industrial District</p>
+              </div>
+            </div>
+
+            {/* Project 2 */}
+            <div className="group relative aspect-video overflow-hidden rounded-xl bg-neutral-800 border border-neutral-700">
+              <img 
+                src={projTwoPic}
+                alt="Residential gas line routing" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white font-bold text-xl mb-1">Residential Gas Lines</h3>
+                <p className="text-orange-400 text-sm font-medium">Suburban Housing</p>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="group relative aspect-video overflow-hidden rounded-xl bg-neutral-800 border border-neutral-700">
+              <img 
+                src={projThreePic}
+                alt="Restaurant kitchen hookup" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white font-bold text-xl mb-1">Restaurant Hookup</h3>
+                <p className="text-orange-400 text-sm font-medium">Downtown Metro</p>
+              </div>
+            </div>
+
+            {/* Project 4 */}
+            <div className="group relative aspect-video overflow-hidden rounded-xl bg-neutral-800 border border-neutral-700">
+              <img 
+                src={projFourPic}
+                alt="Propane delivery fleet" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white font-bold text-xl mb-1">Bulk Delivery</h3>
+                <p className="text-orange-400 text-sm font-medium">Agricultural Sector</p>
+              </div>
+            </div>
+
+            {/* Project 5 */}
+            <div className="group relative aspect-video overflow-hidden rounded-xl bg-neutral-800 border border-neutral-700">
+              <img 
+                src={projFivePic}
+                alt="Underground tank placement" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white font-bold text-xl mb-1">Underground Tanks</h3>
+                <p className="text-orange-400 text-sm font-medium">New Developments</p>
+              </div>
+            </div>
+
+            {/* Project 6 */}
+            <div className="group relative aspect-video overflow-hidden rounded-xl bg-neutral-800 border border-neutral-700">
+              <img 
+                src={projSixPic}
+                alt="Emergency repair services" 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <h3 className="text-white font-bold text-xl mb-1">Emergency Repairs</h3>
+                <p className="text-orange-400 text-sm font-medium">24/7 Support</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-neutral-900 border-t border-neutral-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,24 +341,13 @@ export default function App() {
                   <div>
                     <h4 className="text-white font-bold text-lg mb-1">Call Us</h4>
                     <p className="text-neutral-400 text-sm mb-1">Mon-Fri from 8am to 5pm</p>
-                    <a href="tel:+15551234567" className="text-orange-500 font-semibold text-xl hover:text-orange-400 transition-colors">
-                      (555) 123-4567
+                    <a href="tel:+12562446945" className="text-orange-500 font-semibold text-xl hover:text-orange-400 transition-colors">
+                      (256) 244-6945
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-neutral-950 border border-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-bold text-lg mb-1">Email Us</h4>
-                    <p className="text-neutral-400 text-sm mb-1">We'll respond within 24 hours</p>
-                    <a href="mailto:info@mccrarygas.com" className="text-orange-500 font-semibold hover:text-orange-400 transition-colors">
-                      info@mccrarygas.com
-                    </a>
-                  </div>
-                </div>
+
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-neutral-950 border border-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -263,51 +356,15 @@ export default function App() {
                   <div>
                     <h4 className="text-white font-bold text-lg mb-1">Headquarters</h4>
                     <p className="text-neutral-400">
-                      123 Energy Parkway<br />
-                      Industrial District, ST 12345
+                      123 Adress Adress<br />
+                      City Town, AL 12345
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-neutral-950 p-8 rounded-2xl border border-neutral-800">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-neutral-400 mb-1">First Name</label>
-                    <input type="text" id="firstName" className="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="John" />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-neutral-400 mb-1">Last Name</label>
-                    <input type="text" id="lastName" className="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="Doe" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-neutral-400 mb-1">Email Address</label>
-                  <input type="email" id="email" className="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="john@example.com" />
-                </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-neutral-400 mb-1">Service Needed</label>
-                  <select id="service" className="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors appearance-none">
-                    <option value="">Select a service...</option>
-                    <option value="residential">Residential Propane</option>
-                    <option value="commercial">Commercial Gas</option>
-                    <option value="maintenance">Maintenance & Repair</option>
-                    <option value="other">Other Inquiry</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral-400 mb-1">Message</label>
-                  <textarea id="message" rows={4} className="w-full bg-neutral-900 border border-neutral-800 rounded-md px-4 py-3 text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="How can we help you?"></textarea>
-                </div>
-                <button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-md transition-colors mt-2">
-                  Submit Request
-                </button>
-              </form>
-            </div>
+            
           </div>
         </div>
       </section>
