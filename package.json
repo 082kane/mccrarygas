@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "lucide-react": "^0.575.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.68.1"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   }
 }
